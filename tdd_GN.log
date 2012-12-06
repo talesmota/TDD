@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.8)  5 DEC 2012 23:22
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.8.8)  5 DEC 2012 23:42
 entering extended mode
  %&-line parsing enabled.
 **tdd_GN.tex
@@ -1052,36 +1052,35 @@ Overfull \hbox (29.3095pt too wide) in alignment at lines 194--194
 
 ] [18
 
-] <./dito.jpg, id=514, 276.03125pt x 301.125pt>
-File: ./dito.jpg Graphic file (type jpg)
-
-<use ./dito.jpg> [19
-
- <./dito.jpg>]
-<./shang.jpg, id=540, 198.7425pt x 194.7275pt>
-File: ./shang.jpg Graphic file (type jpg)
- <use ./shang.jpg> [20
-
- <./shang.jpg>] <./capitao.jpg, id=563, 221.82875pt x 254.9525pt>
-File: ./capitao.jpg Graphic file (type jpg)
- <use ./capitao.jpg>
-Overfull \vbox (11.91737pt too high) detected at line 247
+]
+Overfull \hbox (18.78174pt too wide) in paragraph at lines 231--231
+ [] 
  []
 
+[19
+
+] <./dito.jpg, id=538, 276.03125pt x 301.125pt>
+File: ./dito.jpg Graphic file (type jpg)
+ <use ./dito.jpg> [20
+
+ <./dito.jpg>] <./shang.jpg, id=562, 198.7425pt x 194.7275pt>
+File: ./shang.jpg Graphic file (type jpg)
+ <use ./shang.jpg>
 [21
 
- <./capitao.jpg>]
+ <./shang.jpg>] <./capitao.jpg, id=585, 221.82875pt x 254.9525pt>
 File: ./capitao.jpg Graphic file (type jpg)
- <use ./capitao.jpg>
-Overfull \vbox (11.91737pt too high) detected at line 247
+
+<use ./capitao.jpg>
+Overfull \vbox (11.91737pt too high) detected at line 255
  []
 
 [22
 
-]
+ <./capitao.jpg>]
 File: ./capitao.jpg Graphic file (type jpg)
  <use ./capitao.jpg>
-Overfull \vbox (25.51738pt too high) detected at line 247
+Overfull \vbox (11.91737pt too high) detected at line 255
  []
 
 [23
@@ -1089,7 +1088,7 @@ Overfull \vbox (25.51738pt too high) detected at line 247
 ]
 File: ./capitao.jpg Graphic file (type jpg)
  <use ./capitao.jpg>
-Overfull \vbox (11.91737pt too high) detected at line 247
+Overfull \vbox (25.51738pt too high) detected at line 255
  []
 
 [24
@@ -1097,7 +1096,7 @@ Overfull \vbox (11.91737pt too high) detected at line 247
 ]
 File: ./capitao.jpg Graphic file (type jpg)
  <use ./capitao.jpg>
-Overfull \vbox (14.21692pt too high) detected at line 247
+Overfull \vbox (11.91737pt too high) detected at line 255
  []
 
 [25
@@ -1105,16 +1104,24 @@ Overfull \vbox (14.21692pt too high) detected at line 247
 ]
 File: ./capitao.jpg Graphic file (type jpg)
  <use ./capitao.jpg>
-Overfull \vbox (11.91737pt too high) detected at line 247
+Overfull \vbox (14.21692pt too high) detected at line 255
  []
 
 [26
 
-] [27
+]
+File: ./capitao.jpg Graphic file (type jpg)
+ <use ./capitao.jpg>
+Overfull \vbox (11.91737pt too high) detected at line 255
+ []
+
+[27
 
 ] [28
 
 ] [29
+
+] [30
 
  </usr/share/texmf/tex/latex/beamer/base/art/beamericonarticle.pdf>]
 \tf@nav=\write6
@@ -1129,9 +1136,9 @@ Overfull \vbox (11.91737pt too high) detected at line 247
  (./tdd_GN.aux) ) 
 Here is how much of TeX's memory you used:
  17911 strings out of 493848
- 340163 string characters out of 1152824
- 422280 words of memory out of 3000000
- 20620 multiletter control sequences out of 15000+50000
+ 340164 string characters out of 1152824
+ 423280 words of memory out of 3000000
+ 20619 multiletter control sequences out of 15000+50000
  46309 words of font info for 62 fonts, out of 3000000 for 9000
  714 hyphenation exceptions out of 8191
  49i,20n,62p,395b,747s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1139,9 +1146,9 @@ Here is how much of TeX's memory you used:
 are/texmf-texlive/fonts/type1/urw/helvetic/uhvb8a.pfb></usr/share/texmf-texlive
 /fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texmf-texlive/fonts/type1/urw/
 helvetic/uhvro8a.pfb>
-Output written on tdd_GN.pdf (29 pages, 291075 bytes).
+Output written on tdd_GN.pdf (30 pages, 295622 bytes).
 PDF statistics:
- 802 PDF objects out of 1000 (max. 8388607)
- 74 named destinations out of 1000 (max. 500000)
+ 824 PDF objects out of 1000 (max. 8388607)
+ 75 named destinations out of 1000 (max. 500000)
  173 words of extra memory for PDF output out of 10000 (max. 10000000)
 

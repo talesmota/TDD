@@ -156,7 +156,7 @@
   
 \subsection{xUnit}
   \begin{frame}
-   Existem vários framework's para automatizar os testes de unidade. Os mais usados no mercado sem dúvida são os xUnit, abrangindo a quase todas linguagens.
+   Existem vários framework's para automatizar os testes de unidade. Os mais usados no mercado sem dúvida são os xUnit, abrangendo a quase todas linguagens.
    Para PHP temos:
    \begin{itemize}
     \item SimpleTest
@@ -225,16 +225,32 @@
 \section{Conclusão}
   \begin{frame}
     E então...?
-    \begin{itemize}
-      \item \only<1>{Vale a pena testar?}
-      \item \visible<2>{ Vale a pena testar? Sim}
+    
+   \only<1>{Vale a pena testar?}
+   \visible<2>{ Vale a pena testar? Sim}
    
-      \item \only<3>{O tempo gasto escrevendo teste diminui a produtividade do profissional?}
-      \item \visible<4>{ O tempo gasto escrevendo teste diminui a produtividade do profissional? Não}
+   \only<3>{O tempo gasto escrevendo teste diminui a produtividade do profissional?}
+   \visible<4>{ O tempo gasto escrevendo teste diminui a produtividade do profissional? Não}
    
-      \item \only<5>{Pense na regra de Myers, vale a pena sacrificar OO?}
-      \item \visible<6>{Pense na regra de Myers, vale a pena sacrificar OO? Nunca será...}
-    \end{itemize}
+   \only<5>{Pense na regra de Myers, vale a pena sacrificar OO?}
+   \visible<6>{Pense na regra de Myers, vale a pena sacrificar OO? \textbf{Nunca será...}}
+   \visible<6>{
+    \begin{figure}[h]
+	\centering
+	\includegraphics[scale=0.5]{./capitao.jpg}
+	% dito.jpg: 275x300 pixel, 72dpi, 9.70x10.58 cm, bb=0 0 275 300
+	\caption{Nuna}
+	\label{fig:Nunca}
+      \end{figure}
+      }
+      
+  \end{frame}
+  \begin{frame}
+   \only<1>{A idéia do framework xUnit, e de todo o movimento de teste relacionado ao desenvolvimento de software foi de \textbf{Kent Beck}.
+   A primeira versão do xUnit foi o SUnit para \textbf{smalltalk}.}
+   \only<2>{
+   Essa idéia tão simples e fantástica atriu \textbf{Erich Gamma} que junto com \textbf{Kent Beck} criaram o JUnit, que consolidou a prática.
+   }
   \end{frame}
 
    
