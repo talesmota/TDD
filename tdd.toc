@@ -1,0 +1,8 @@
+\beamer@endinputifotherversion {3.10pt}
+\select@language {english}
+\beamer@sectionintoc {1}{O que \'e qualidade?}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{O que \'e qualidade?}{3}{0}{1}
+\beamer@subsectionintoc {1}{2}{O que \'e um c\'odigo de qualidade?}{5}{0}{1}
+\beamer@subsectionintoc {1}{3}{Aus\^encia de bugs}{6}{0}{1}
+\beamer@sectionintoc {2}{Testes Unit\'arios}{9}{0}{2}
+\beamer@subsectionintoc {2}{1}{xUnit}{9}{0}{2}

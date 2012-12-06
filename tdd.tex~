@@ -1,0 +1,229 @@
+% Copyright 2007 by Till Tantau
+%
+% This file may be distributed and/or modified
+%
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+%
+% See the file doc/licenses/LICENSE for more details.
+
+
+
+\documentclass{beamer}
+
+%
+% DO NOT USE THIS FILE AS A TEMPLATE FOR YOUR OWN TALKS¡!!
+%
+% Use a file in the directory solutions instead.
+% They are much better suited.
+%
+
+
+% Setup appearance:
+
+\usepackage{longtable}
+
+\usetheme{Darmstadt}
+\usefonttheme[onlylarge]{structurebold}
+\setbeamerfont*{frametitle}{size=\normalsize,series=\bfseries}
+\setbeamertemplate{navigation symbols}{}
+
+
+% Standard packages
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+
+
+% Setup TikZ
+\usepackage{verbatim}
+\usepackage{xcolor}
+\usercolortheme{crane}
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+\tikzstyle{block}=[draw opacity=0.7,line width=1.4cm]
+
+
+% Author, Title, etc.
+
+\title[Testes] 
+{%
+ Como testar unitariamente em PHP
+}
+
+\author[Tales]
+{
+  Tales Mota Machado\inst{1}\inst{2} 	
+}
+
+\institute[Tübingen and others]
+{
+  \inst{1}%
+  Universidade Federal de Ouro Preto
+  \and
+  \inst{2}%
+  Analista de Sistemas -GerenciaNet-
+    
+}
+
+\date[WABI 2006]
+{Uma visão geral sobre teste unitários.}
+
+
+
+% The main document
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+
+\section{O que é qualidade?}
+
+\subsection{O que é qualidade?}
+
+\begin{frame}[t]{O que é qualidade?}
+  \begin{center}
+    \vspace*{\fill}
+      \resizebox{!}{1cm}{QUALIDADE}	            \end{center}
+    \vspace*{\fill} 
+
+\end{frame}
+
+\begin{frame}{}
+   O dicionário Michaelis define qualidade como: ``2 Excelência, virtude, talento.'', ``4 Grau de perfeição, de precisão, de conformidade a um certo padrão.''
+\end{frame}
+
+\subsection{O que é um código de qualidade?}
+  \begin{frame}{O que é um código de qualidade?}
+  ``Qualidade depende do ponto de vista!''\cite{codigolivre}
+    \begin{itemize}
+      \item Do usuário: satisfação de requisitos, ausência de bugs, frequência de releases, bom desempenho, etc.
+      \item Do desenvolvedor: facilidade de entender o código, flexibilidade para modificar o código, abrangência da suíte de testes, etc.
+      
+      \end{itemize}
+  \end{frame}
+
+\subsection{Ausência de bugs}
+  \begin{frame}{Ausência de bugs}
+   É possível escrever um código livre de bug?
+  \end{frame}
+  \begin{frame}{o que é um bug?}
+   O que é um bug?
+  \end{frame}
+  \begin{frame}{Impossível}
+   É impossível\cite{sommerville}. Por mais simples que seja o código, não há como garantir que não haverá bugs devido às várias dependências:
+   \begin{itemize}
+    \item Compilador/interpretador
+    \item SO
+    \item Usuário final
+   \end{itemize}
+  Toda via o correto seria dizer minimizar a ocorrência de bugs.
+  \end{frame}
+
+
+%Nova sessao
+%Testes
+\section{Testes Unitários}
+\subsection{xUnit}
+  \begin{frame}
+   Existem vários framework's para automatizar os testes de unidade. Os mais usados no mercado sem dúvida são os xUnit, abrangindo a quase todas linguagens.
+   Para PHP temos:
+   \begin{itemize}
+    \item PHPUnit
+    \item \textbf{SimpleTest}
+   \end{itemize}
+   
+  \end{frame}
+  
+  \begin{frame}{SimpleTest}
+   simpletest ``http://www.simpletest.org/'' usa a mesma API do xUnit:
+       \begin{longtable}{l|p{5cm}}
+   	  assertTrue (\$ x) &		Falha se \$ x é falsa  \\ \hline
+	  assertFalse (\$ x)&		Falha se \$ x é verdadeiro\\ \hline
+	  assertNull (\$ x)	&	Falha se \$ x é definido\\ \hline
+	  assertNotNull (\$ x)&	Falhar se não definir \$ x\\ \hline
+	  assertIsA (\$ x, \$ t)&	Falha se \$ x não é o tipo ou classe \$ t\\ \hline
+	  assertNotA (\$ x, \$ t)&	Falha se \$ x é da classe ou tipo de \$ t\\ \hline
+	  assertEqual (\$ x, \$ y)&	Falha se \$ x == \$ y é falso\\ \hline
+	  assertNotEqual (\$ x, \$ y)&	Falha se \$ x == \$ y é verdadeiro\\ \hline
+	  assertWithinMargin (\$ x, \$ y, \$ m)&	Falhar se abs (\$ x - \$ y) <\$ m é falsa\\ \hline
+	\end{longtable}
+	\end{frame}
+	\begin{frame}
+	\begin{longtable}{l|p{5cm}}
+	  assertOutsideMargin (\$ x, \$ y, \$ m)&	Falhar se abs (\$ x - \$ y) <\$ m é verdade\\ \hline
+	  assertIdentical (\$ x, \$ y)&	Falhar se y \$ x == \$ é falsa ou uma incompatibilidade de tipo\\ \hline
+	  assertNotIdentical (\$ x, \$ y)&	Falhar se y \$ x == \$ é verdadeiro e tipos de correspondência\\ \hline
+	  assertReference (\$ x, \$ y)&	Falhar a menos que \$ e \$ x y são a mesma variável\\ \hline
+	  assertClone (\$ x, \$ y)&	Falhar a menos que \$ e \$ x y são cópias idênticas\\ \hline
+	  assertPattern (\$ p, \$ x)&	Falhar a menos que a regex \$ p \$ x corresponde\\ \hline
+	  assertNoPattern (\$ p, \$ x)&	Falhar se a regex \$ p \$ x corresponde\\ \hline
+	  
+       \end{longtable}
+	\end{frame}
+	\begin{frame}
+	\begin{longtable}{l|p{5cm}}
+	  expectError (\$ x)&	Falhar se erro de correspondência não occour\\ \hline
+	  expectException (\$ x)&	Falha se a exceção de correspondência não é lançada\\ \hline
+	  ignoreException (\$ x)&	Engole qualquer exceção próximo correspondência\\ \hline
+	  assert (\$ e)&	Falha na falhou expectativa objeto \$ e\\ \hline
+   \end{longtable}
+
+  \end{frame}
+
+  \begin{frame}{Mock}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.5]{./dito.jpg}
+      % dito.jpg: 275x300 pixel, 72dpi, 9.70x10.58 cm, bb=0 0 275 300
+      \caption{Mock1}
+      \label{fig:Dito}
+    \end{figure}
+  
+  \end{frame}
+  \begin{frame}{Mock}
+    \begin{figure}[h]
+      \centering
+      \includegraphics[scale=0.5]{./shang.jpg}
+      % dito.jpg: 275x300 pixel, 72dpi, 9.70x10.58 cm, bb=0 0 275 300
+      \caption{Mock2}
+      \label{fig:Shang Tsung}
+    \end{figure}
+  
+  \end{frame}
+
+
+
+   
+
+%
+\begin{thebibliography}{9}
+  \bibitem{sommerville} 
+  \emph{Engenharia de software}
+  Ian Sommerville ,  2011, 9ª Edição   
+
+
+  \bibitem{codigolivre} 
+  \emph{Qualidade de Código: mantendo seu projeto de software sob controle}
+  2009, Antonio Terceiro ,
+  \emph{\text``http://softwarelivre.org/terceiro/blog/qualidade-de-codigo-mantendo-seu-projeto-de-software-sob-controle''}
+
+
+  \bibitem{beamer} 
+  \emph{Prática: melhore a qualidade do código para evitar uma enchente de bugs}
+  2010, Guilherme Silveira, Caelum ,
+  \emph{\text``http://blog.caelum.com.br/pratica-melhore-a-qualidade-do-codigo-para-evitar-uma-enchente-de-bugs/''}
+
+\end{thebibliography}
+\end{document}
+
+
